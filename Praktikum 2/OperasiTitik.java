@@ -6,43 +6,29 @@
  *
  */
 
-/* LATIHAN */
-class OperasiTitik{
-	public void refleksiSumbuX(Titik titik){
-		double ordinat = titik.getOrdinat();
-		ordinat = ordinat*-1;
-		titik.setOrdinat(ordinat);
-	}
-	
-	public void refleksiSumbuY(Titik titik){
-		double absis = titik.getAbsis();
-		absis = absis*-1;
-		titik.setAbsis(absis);
-	}
+public class OperasiTitik {
+
+    // Private method
+    private void refleksiSumbuX(Titik t1){
+        t1.setAbsis(t1.getAbsis());
+        t1.setOrdinat(-1*(t1.getOrdinat()));
+    }
+
+    private void refleksiSumbuY(Titik t1){
+        t1.setAbsis(-1*(t1.getAbsis()));
+        t1.setOrdinat(t1.getOrdinat());
+    }
+
+    // Public method
+    public Titik refleksiX(Titik t1){
+        refleksiSumbuX(t1);
+        return t1;
+    }
+
+    public Titik refleksiY(Titik t1){
+        refleksiSumbuY(t1);
+        return t1;
+    }
 }
 
-/* TUGAS */
-class OperasiTitik {
-	private void refleksiSumbuX(Titik titik) {
-		double ordinat = titik.getOrdinat();
-		ordinat = ordinat * -1;
-		titik.setOrdinat(ordinat);	
-	}
-	
-	private void refleksiSumbuY(Titik titik) {
-		double absis = titik.getAbsis();
-		absis = absis * -1;
-		titik.setAbsis(absis);
-	}
-	
-	public Titik refleksiX(Titik t1) {
-		refleksiSumbuX(t1);
-		return t1;
-	}
-			
-	public Titik refleksiY(Titik t1) {
-		refleksiSumbuY(t1);
-		return t1;
-	}
-}
 
