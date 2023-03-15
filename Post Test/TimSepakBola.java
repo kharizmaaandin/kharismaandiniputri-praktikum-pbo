@@ -4,7 +4,7 @@
  * Deskripsi    : Representasi dari TimSepakBola
  */
 
-class TimSepakbola {
+public class TimSepakbola {
 
   // Assume there are only 2 teams using this class!
 
@@ -22,16 +22,18 @@ class TimSepakbola {
 
   // TimSepakbola(nama: string)
   // TODO: Create an overloading constructor below this comment
-    TimSepakBola(String nama) {
+
+  TimSepakbola(String nama){
     this.nama = nama;
-    skor = 0;
-    isOnMatch = false;
+    this.skor = 0;
+    this.isOnMatch = false;
   }
+  
 
   // TODO: Fix the method below
   // Replace [TIM 1] and [TIM 2] with the correct attribute
   // [TIM 1] and [TIM 2] are commutative, so you don't need to worry if [TIM 1] or [TIM 2] refer to either this class or 'lawan'
-  void startTandingBola(TimSepakBola lawan) {
+  void startTandingBola(TimSepakbola lawan) {
     // DO NOT change both if conditions
     if (Boolean.TRUE.equals(this.isOnMatch)) {
       System.out.println("Tim " + this.nama + " sedang dalam pertandingan!");
@@ -59,7 +61,10 @@ class TimSepakbola {
       );
       return;
     }
-    this.skor++;
+    else{
+      this.skor = this.skor+1;
+    }
+
   }
 
   // TODO: Implement getSkor() method. This is a selector to get the score for a team
@@ -71,33 +76,36 @@ class TimSepakbola {
       );
       return 0;
     }
-    return this.skor;
+    else{
+      return skor;
+    }
+
   }
 
   // TODO: Implement setIsOnMatch() method. This is a mutator to set a new boolean value for isOnMatch
   void setIsOnMatch(boolean onMatch) {
-    this.isOnMatch = onMatch;
+    isOnMatch = onMatch;
   }
 
   // TODO: Fix the method below. This method below is quite similar with startTandingBola()
   // Replace [TIM 1] and [TIM 2] with the correct attribute
   // [TIM 1] and [TIM 2] are commutative, so you don't need to worry if [TIM 1] or [TIM 2] refer to either this class or 'lawan'
   void endTandingBola(TimSepakbola lawan) {
-  // DO NOT change the if condition
+    // DO NOT change the if condition
     if (
-        Boolean.FALSE.equals(this.isOnMatch) &&
-        Boolean.FALSE.equals(lawan.isOnMatch)
+      Boolean.FALSE.equals(this.isOnMatch) &&
+      Boolean.FALSE.equals(lawan.isOnMatch)
     ) {
-        System.out.println("Kedua tim TIDAK sedang dalam pertandingan");
-        return;
+      System.out.println("Kedua tim TIDAK sedang dalam pertandingan");
+      return;
     }
 
     System.out.println(
-        "\nPertandingan antara " +
-        this.nama +
-        " dan " +
-        lawan.nama +
-        " selesai!\n"
+      "\nPertandingan antara " +
+      this.nama +
+      " dan " +
+      lawan.nama +
+      " selesai!\n"
     );
     this.setIsOnMatch(false);
     lawan.setIsOnMatch(false);
