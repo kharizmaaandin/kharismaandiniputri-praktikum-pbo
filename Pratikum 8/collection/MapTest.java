@@ -24,15 +24,15 @@ public class MapTest {
         // Iterasi untuk mengambil keseluruhan nilai dari kunci
         for (Integer key : keys) {
             String value = map.get(key);
-            System.out.println("Kunci: " + key + ", Nilai: " + value);
+            System.out.println(key + " = " + value);
         }
     }
 }
 
 
-// TUGAS
-// Kunci: 1, Nilai: satu
-// Kunci: 2, Nilai: dua
-// Kunci: 3, Nilai: tiga
-// Kunci: 4, Nilai: empat
-// Kunci: 5, Nilai: lima
+// Tugas
+// 1 = satu
+// 2 = dua
+// 3 = tiga
+// 4 = empat
+// 5 = lima
