@@ -2,7 +2,7 @@
  * Nama 		: Kharisma Andini Putri
  * NIM			: 24060121140119
  * Tanggal		: 6 Juni 2023
- * File 		: LambdaHashMap.java
+ * File 		: LambdaHashmap.java
  * Deskripsi 	: implementasi penggunaan lambda expression dalam pemrograman Java 
 				  untuk memanipulasi data dalam objek HashMap
 */
@@ -13,7 +13,7 @@
 
 import java.util.*;
 
-public class LambdaHashMap{
+public class LambdaHashmap{
 
     public static void main(String[] args){
 
